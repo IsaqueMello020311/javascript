@@ -1,126 +1,183 @@
-// 1. Crie uma variável chamada `nome` e atribua seu nome a ela. Exiba o nome no console.
 
-let nome= "Isaque Mello"
-console.log (nome)
+   // 1. Par ou Ímpar
+// Crie uma função chamada `parOuImpar` que recebe um número (tipo: Number).
+// Utilize o operador de mod (%) e uma estrutura condicional `if` para retornar "Par" ou "Ímpar".
+function parOuImpar(numero){
+    if (numero % 2 === 0){
+       return 'par'
+    } else{
+       return "ímpar"
+    }
+   }
+   console.log(parOuImpar(24));
 
-// 2. Crie uma constante chamada `PI` e atribua o valor 3.14. Exiba o valor no console.
-const PI = "3,14"
-console.log(PI)
+// 2. Maior de Três
+// Crie uma função chamada `maiorDeTres` que recebe três números (tipo: Number).
+// Crie uma lógica de programação para retornar o maior número.
 
-// 3. Crie uma variável `idade`, atribua um valor e depois altere para um novo valor. Exiba ambos no console.
-let idade = "26"
-console.log(idade)
-idade= "25"
-console.log (idade)
+function maiorDeTres( num1 , num2 , num3){
+    let maior = num1;
 
-// 4. Crie duas variáveis de string, `primeiroNome` e `sobrenome`, e exiba o nome completo concatenado.
+    if(num2 > maior){
+        maior = num2;
+    }
+    if(num3 > maior){
+        maior = num3;
+    }
+    return maior;
+}
+console.log(maiorDeTres(3 , 7 , 11));
 
-const primeironome = "Isaque "
+// 3. Verificação de Idade
+// Crie uma função chamada `verificaIdade` que recebe a idade (tipo: Number).
+// Utilize uma estrutura condicional `if` para retornar "Menor de idade" ou "Maior de idade".
 
-let sobrenome = "Mello"
-console.log(primeironome + sobrenome)
+function verificaIdade(idade){
+    if(idade < 18){
+        return 'Menor de idade'
+    }
+    else{
+        return 'Maior de idade'
+    }
+}
+console.log(verificaIdade(20));
 
-// 5. Dada a string `mensagem = "Olá, mundo!"`, exiba a mensagem em letras maiúsculas.
+// 4. Classificação de Notas
+// Crie uma função chamada `classificaNota` que recebe uma nota (tipo: Number).
+// Utilize `if`, `else if` e `else` para retornar "Aprovado", "Recuperação" ou "Reprovado".
 
-let mensagem = "Olá mundo"
-let maiúsculas = mensagem . toUpperCase()
-console.log(mensagem)
+function classificaNota(nota){
+    if(nota >= 7){
+        return 'Aprovado'
+    }else if(nota <= 4){
+        return 'Recuperação'
+    } else{
+        return 'Reprovado'
+    }
+}
+console.log(classificaNota(8));
 
+// 5. Dia da Semana
+// Crie uma função chamada `diaDaSemana` que recebe um número (tipo: Number) de 1 a 7.
+// Utilize uma estrutura `switch` para retornar o nome do dia da semana correspondente.
 
+function diaDaSemana (dia){
 
-// 6. Crie um array com os nomes de três frutas e exiba o segundo elemento do array.
-let frutas = ["maça" , "banana" , "laranja"]
-frutas.push("manga")
-frutas.shift()
-console.log(frutas)
+    switch(dia){
+        case 1:
+            return 'Domingo'
+            break
+        case 2:
+            return 'Segunda-Feira'
+            break
+        case 3:
+            return 'Terça-Feira'
+            break
+        case 4:
+            return 'Quarta-Feira'
+            break
+        case 5:
+            return'Quinta-Feira'
+            break
+        case 6:
+            return 'Sexta-Feira'
+            break
 
-// 7. Crie um array com três números e adicione um novo número no final. Exiba o array atualizado.
+            default:
+                return 'Sabado'
+                break
+    }
 
-let numeros = ["1", "2", "3"]
-numeros.push("4")
-numeros.shift
-console.log(numeros)
+}
+console.log(diaDaSemana(3));
 
-// 8. Crie duas variáveis, `a` e `b`, atribua valores numéricos a elas e exiba a soma.
-let a = 3
-let b = 4
-let resultado = 3+4
-console.log(resultado)
+// 6. Classificação de Animal
+// Crie uma função chamada `classificaAnimal` que recebe uma string representando um animal dentre os seguintes: cachorro, gato, passarinho, salmão, lagarto.
+// Utilize uma estrutura `switch` para retornar se é "Mamífero", "Ave", "Anfíbio", "Peixe".
 
-// 9. Calcule a média de três números armazenados em variáveis e exiba o resultado.
+function classificaAnimal(animal) {
+    switch (animal){
+        case 'cachorro':
+            return "Mamífero"
+        case 'gato':
+            return "Mamífero";
+        case 'passarinho':
+            return "Ave";
+        case 'salmão':
+            return "Peixe";
+        case 'lagarto':
+            return "Anfíbio";
+        default:
+            return "Animal desconhecido";
+    }
+}
 
-let um = 1
-let cinco = 5
-let dez = 10
-let media = (1 + 5 + 10) /2
-console.log(media)
-// 10. Crie uma variável `contador` inicializada em 0, incremente-a três vezes e exiba seu valor final.
-
-let contador= 0 
-
-// 11. Crie duas variáveis booleanas, `chuvendo` e `frio`, e use um operador lógico para verificar se deve levar um guarda-chuva.
-
-let chuvendo = "true"
-let frio = "false"
-let comparaçao2 = chuvendo || frio
-console.log(comparaçao2)
-
-// 12. Crie uma variável `idade` e use um operador lógico para verificar se a pessoa pode dirigir (idade >= 18).
-
-let idadepessoa= 16
-let idadepermitida= 18
-let resultado1 = idadepessoa >= idadepermitida
-console.log(resultado1)
-
-// 13. Crie duas variáveis `x` e `y`, atribua valores diferentes e verifique se são iguais.
-
-let x= 10
-let y = 10
-let comparaçao = x === y
-console.log(comparaçao)
-
-// 14. Crie uma variável `idade` e verifique se a pessoa é maior de idade (idade >= 18) e exiba uma mensagem correspondente.
-
-let primeironumero = 19
-let segundonumero = 18
-let result1 = primeironumero >= segundonumero
-console.log(result1)
-
-// 15. Crie duas strings, `senha1` e `senha2`, e verifique se elas são iguais.
-
- let senha1 = "isaque10"
- let senha2 = "isaque10"
-let comparaçao4 = senha1 === senha2
-console.log(comparaçao4)
-
-// 16. Crie uma string e exiba o número de caracteres que ela contém.
-
-let string = "Gosto de Jogar Bola"
-let numeroDeCaracteres = string.length
-console.log(numeroDeCaracteres)
-
-
-// 18. Crie uma variável numérica e verifique se é par ou ímpar usando um operador aritmético.
-let numero = 17
-let épar = numero % 2 === 0 
-console.log(épar)
-
-
-// 19. Crie duas variáveis, `base` e `expoente`, e calcule a potência usando o operador de exponenciação.
-
-let base = 2
-let expoente = 3
-let resultadoDaConta = base ** expoente
-console.log(resultadoDaConta)
-// 20. Crie duas variáveis, `nota1` e `nota2`, calcule a média e verifique se a média é maior ou igual a 7.
-
-let nota1 = 8
-let nota2 = 7
-let média = (nota1 + nota2) / 2
-console.log(média)
+console.log(classificaAnimal('salmão'));
 
 
+// 7. Calculadora Simples
+// Crie uma função chamada `calculadora` que recebe dois números e uma string representando uma operação (soma, subtração, multiplicação, divisão).
+// Utilize uma estrutura `switch` para retornar o resultado da operação.
 
+function calculadora( num3 , num4 , operação){
+    switch(operação){
+        case 'soma':
+            return num3 + num4;
+        case 'subtração':
+            return num3 - num4;
+        case 'multiplicação':
+            return num3 * num4;
+        case 'divisão':
+            return num3 / num4;
+        default:
+            return 'operação invalida';
+    }
+}
+console.log(calculadora(10 , 5 , 'multiplicação'))
 
+// 8. Par ou Ímpar em uma Lista
+// Crie uma função chamada `listaParOuImpar` que recebe um array de números.
+// Utilize o método `map()` e uma estrutura condicional `if` para retornar uma nova lista com "Par" ou "Ímpar" para cada número.
+function listaParOuImpar(numeros) {
+    return numeros.map(numero => (numero % 2 === 0 ? "Par" : "Ímpar"));
+}
 
+// 9. Mensagem de Boas-Vindas
+// Crie uma função chamada `mensagemBoasVindas` que recebe um nome (tipo: String) e um horário (tipo: Number).
+// Utilize uma estrutura condicional `if`, `else if` e `else` para retornar uma mensagem apropriada: "Bom dia", "Boa tarde" ou "Boa noite".
 
+function mensagemBoasVindas(nome, horario) {
+    let mensagem;
+
+    if (horario >= 0 && horario < 12) {
+        mensagem = 'Bom dia';
+    } else if (horario >= 12 && horario < 18) {
+        mensagem = 'Boa tarde';
+    } else if (horario >= 18 && horario < 24) {
+        mensagem = 'Boa noite';
+    } else {
+        return 'Horário inválido!';
+    }
+
+    return `${mensagem}, ${nome}!`;
+}
+
+console.log(mensagemBoasVindas('Gustavo', 20));
+
+// 10. Classificação de Filmes
+// Crie uma função chamada `classificaFilme` que recebe uma nota (tipo: Number) de um filme.
+// Utilize uma estrutura condicional `if`, `else if` e `else` para retornar "Excelente" (nota 8 ou mais), 
+// "Bom" (nota de 5 a 7) ou "Ruim" (nota abaixo de 5).
+function classificaFilme(nome, nota){
+    if(nota >= 8){
+        console.log(`${nome} recebeu nota ${nota} e eh Excelente!`)
+    } else if( nota < 8 && nota >= 5){
+        console.log(`${nome} recebeu nota ${nota} e eh bom`)
+    }else {
+        console.log(`${nome} recebeu nota ${nota} e eh uma merda`)
+    }
+}
+classificaFilme('Lalaland', 10)
+classificaFilme('Velozes e Furiosos', 10)
+classificaFilme('Clube da Luta', 10)
+classificaFilme('Bladerunner 2047', 10)
